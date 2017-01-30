@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+   <h1>Новый год</h1>
+    <p>Написать функцию, которая возвращает количество дней, оставшихся до нового года.<br>
+        Функция должна корректно работать при запуске в любом году, т. е. грядущий год должен вычисляться программно.<br>
+    </p>   
+  <?php
+		function days()
+	{
+        $now = date('z');
+        $year = date('L');
+        if ($year)
+            {
+            $daysrest = 365 - $now;
+	        }
+	    else
+	        {
+	        $daysrest = 364 - $now;
+	        }
+	    return $daysrest;
+	}
+	echo 'До Нового Года осталось: ' . days() . ' дней!';
+?>
+
+</body>
+</html>
