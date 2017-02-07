@@ -11,7 +11,7 @@
 </p>
 <?php
  $arr = [1, 2, 3, 8, 14, 89, 45];
-for ($i = 0; $i < count($arr) - 1; $i++) {
+for ($i = 0; $n = count($arr) - 1; $i < $n; $i++) {
     for ($j = 0; $j < count($arr) - 1 - $i; $j++) {
         if ($arr[$i] > $arr[$i + 1]) {
             $arr[$i] += $arr[$i + 1];

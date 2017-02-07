@@ -16,9 +16,15 @@
 </p>
 <?php
    $arr = [1, 2, 3, 8, 14, 89, 45];
-   for ($i=0; $i < $arr; $i++, $arr--){
-   ...
-   }
+   for ($i=0; $i <= (count($arr))/2 - 1;$i++{
+        $arr[$i] = $arr[$i] + $arr[count($arr) - 1 - $i];
+        $arr[count($arr) - 1 - $i] = $arr[$i] - $arr[count($arr) - 1 - $i];
+        $arr[$i] = $arr[$i] - $arr[count($arr) - 1 - $i];
+    }
+
+    for ($i=0; $i<= count($arr); $i++){
+        echo $arr[$i] . ' ';
+        }
 ?>
 </body>
 </html>
