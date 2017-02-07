@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Палиндром</h1>
+<p>Написать функцию, которая проверяет, является ли переданное число или строка палиндромом и возвраащет true. <br/>
+В противном случаи возвращает false.<br/>
+Палиндром — это число или текст, который читается одинаково и слева, и справа: 939; 49094; 11311<br/>
+</p>
+<?php
+  function palindrom($str)
+  {
+      $symbl = strlen($str);
+      for ($i = 0; $i < (int)($symbl/2); $i++){
+          if ($str[$i] == $str[$symbl - $i -1]){
+              if ($i == (int)($symbl/2) -1){
+                  return $str. ' это палиндром';
+                  }
+              }
+              else {
+                  return $str. ' это не палиндром';
+              }
+       }
+  }
+  echo palindrom('49094');
+?>
+</body>
+</html>
